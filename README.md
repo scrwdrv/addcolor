@@ -12,7 +12,11 @@ npm i addcolor
 import color from 'addcolor';
 
 console.log(color.yellow('add color to text'));
+
 console.log(`${color.bg.blue('add color to background')} also ${color.style.reverse('reverse background & foreground')}`);
+```
+```js
+console.log(`${color.code.fg.black}black text and ${color.code.bg.cyan}black text with cyan background${color.code.reset}`);
 ```
 
 ### Colors
