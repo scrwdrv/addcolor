@@ -32,3 +32,4 @@ Both foreground and background
 - bright
 - dim
 - underscore
+- strikethrough

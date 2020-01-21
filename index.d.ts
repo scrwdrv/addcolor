@@ -16,6 +16,39 @@ declare const _default: {
         bright: (str: string) => string;
         dim: (str: string) => string;
         underscore: (str: string) => string;
+        strikethrough: (str: string) => string;
+    };
+    code: {
+        fg: {
+            black: string;
+            red: string;
+            green: string;
+            yellow: string;
+            blue: string;
+            magenta: string;
+            cyan: string;
+            white: string;
+        };
+        bg: {
+            black: string;
+            red: string;
+            green: string;
+            yellow: string;
+            blue: string;
+            magenta: string;
+            cyan: string;
+            white: string;
+        };
+        style: {
+            bright: string;
+            dim: string;
+            underscore: string;
+            blink: string;
+            reverse: string;
+            hidden: string;
+            strikethrough: string;
+        };
+        reset: string;
     };
     black: (str: string) => string;
     white: (str: string) => string;

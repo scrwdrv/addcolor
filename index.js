@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const codes = {
+const code = {
     fg: {
         black: '\x1b[30m',
         red: '\x1b[31m',
@@ -27,16 +27,20 @@ const codes = {
         underscore: '\x1b[4m',
         blink: '\x1b[5m',
         reverse: '\x1b[7m',
-        hidden: '\x1b[8m'
+        hidden: '\x1b[8m',
+        strikethrough: '\x1b[9m'
     },
+    reset: '\x1b[0m'
 };
 let fg = {}, bg = {}, style = {};
-for (let type in codes)
-    for (let item in codes[type])
-        eval(`${type}[item] = (str)=> { return '${codes[type][item]}' + str + '\x1b[0m' }`);
+for (let type in code)
+    if (type !== 'reset')
+        for (let item in code[type])
+            eval(`${type}[item] = (str)=> { return '${code[type][item]}' + str + '${code.reset}' }`);
 exports.default = {
     ...fg,
     bg: bg,
-    style: style
+    style: style,
+    code: code
 };
 //# sourceMappingURL=index.js.map

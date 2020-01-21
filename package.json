@@ -1,6 +1,6 @@
 {
   "name": "addcolor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add color to Node.js console text and background.",
   "main": "index.js",
   "scripts": {
