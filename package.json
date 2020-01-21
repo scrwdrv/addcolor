@@ -1,0 +1,27 @@
+{
+  "name": "addcolor",
+  "version": "1.0.0",
+  "description": "Add color to Node.js console text and background.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scrwdrv/addcolor.git"
+  },
+  "keywords": [
+    "cli",
+    "color",
+    "console"
+  ],
+  "author": "scrwdrv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scrwdrv/addcolor/issues"
+  },
+  "homepage": "https://github.com/scrwdrv/addcolor#readme",
+  "devDependencies": {
+    "@types/node": "^13.1.8"
+  }
+}
