@@ -36,7 +36,15 @@ let fg = {}, bg = {}, style = {};
 for (let type in code)
     if (type !== 'reset')
         for (let item in code[type])
-            eval(`${type}[item] = (str)=> { return '${code[type][item]}' + str + '${code.reset}' }`);
+            switch (type) {
+                case 'fg':
+                case 'bg':
+                    eval(`${type}[item] = (str, style) => { return '${code[type][item]}' + (style ? code.style[style] : '') + str + '${code.reset}' }`);
+                    break;
+                case 'style':
+                    eval(`${type}[item] = (str, color) => { return (color ? code.fg[color] : '') + '${code[type][item]}' + str + '${code.reset}' }`);
+                    break;
+            }
 exports.default = {
     ...fg,
     bg: bg,

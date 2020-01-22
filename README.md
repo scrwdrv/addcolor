@@ -18,7 +18,10 @@ console.log(`${color.bg.blue('add color to background')} also ${color.style.reve
 ```js
 console.log(`${color.code.fg.black}black text and ${color.code.bg.cyan}black text with cyan background${color.code.reset}`);
 ```
-
+```js
+console.log(color.red('red and bold ', 'bright'));
+console.log(color.style.bright('bold and red', 'red'));
+```
 ### Colors
 Both foreground and background
 - black

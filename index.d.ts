@@ -1,22 +1,24 @@
+declare type Styles = 'blink' | 'reverse' | 'hidden' | 'bright' | 'dim' | 'underscore' | 'strikethrough';
+declare type Colors = 'black' | 'white' | 'red' | 'green' | 'yellow' | 'blue' | 'cyan' | 'magenta';
 declare const _default: {
     bg: {
-        black: (str: string) => string;
-        white: (str: string) => string;
-        red: (str: string) => string;
-        green: (str: string) => string;
-        yellow: (str: string) => string;
-        blue: (str: string) => string;
-        cyan: (str: string) => string;
-        magenta: (str: string) => string;
+        black: (str: string, style?: Styles) => string;
+        white: (str: string, style?: Styles) => string;
+        red: (str: string, style?: Styles) => string;
+        green: (str: string, style?: Styles) => string;
+        yellow: (str: string, style?: Styles) => string;
+        blue: (str: string, style?: Styles) => string;
+        cyan: (str: string, style?: Styles) => string;
+        magenta: (str: string, style?: Styles) => string;
     };
     style: {
-        blink: (str: string) => string;
-        reverse: (str: string) => string;
-        hidden: (str: string) => string;
-        bright: (str: string) => string;
-        dim: (str: string) => string;
-        underscore: (str: string) => string;
-        strikethrough: (str: string) => string;
+        blink: (str: string, color?: Colors) => string;
+        reverse: (str: string, color?: Colors) => string;
+        hidden: (str: string, color?: Colors) => string;
+        bright: (str: string, color?: Colors) => string;
+        dim: (str: string, color?: Colors) => string;
+        underscore: (str: string, color?: Colors) => string;
+        strikethrough: (str: string, color?: Colors) => string;
     };
     code: {
         fg: {
@@ -50,13 +52,13 @@ declare const _default: {
         };
         reset: string;
     };
-    black: (str: string) => string;
-    white: (str: string) => string;
-    red: (str: string) => string;
-    green: (str: string) => string;
-    yellow: (str: string) => string;
-    blue: (str: string) => string;
-    cyan: (str: string) => string;
-    magenta: (str: string) => string;
+    black: (str: string, style?: Styles) => string;
+    white: (str: string, style?: Styles) => string;
+    red: (str: string, style?: Styles) => string;
+    green: (str: string, style?: Styles) => string;
+    yellow: (str: string, style?: Styles) => string;
+    blue: (str: string, style?: Styles) => string;
+    cyan: (str: string, style?: Styles) => string;
+    magenta: (str: string, style?: Styles) => string;
 };
 export default _default;

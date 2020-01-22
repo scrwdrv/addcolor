@@ -34,13 +34,21 @@ const code = {
     reset: '\x1b[0m'
 }
 
-let fg: { [color in Colors]: (str: string) => string; } = {} as any,
-    bg: { [color in Colors]: (str: string) => string; } = {} as any,
-    style: { [style in Styles]: (str: string) => string } = {} as any;
+let fg: { [color in Colors]: (str: string, style?: Styles) => string; } = {} as any,
+    bg: { [color in Colors]: (str: string, style?: Styles) => string; } = {} as any,
+    style: { [style in Styles]: (str: string, color?: Colors) => string } = {} as any;
 
 for (let type in code)
     if (type !== 'reset') for (let item in code[type])
-        eval(`${type}[item] = (str)=> { return '${code[type][item]}' + str + '${code.reset}' }`);
+        switch (type) {
+            case 'fg':
+            case 'bg':
+                eval(`${type}[item] = (str, style) => { return '${code[type][item]}' + (style ? code.style[style] : '') + str + '${code.reset}' }`);
+                break;
+            case 'style':
+                eval(`${type}[item] = (str, color) => { return (color ? code.fg[color] : '') + '${code[type][item]}' + str + '${code.reset}' }`);
+                break;
+        }
 
 export default {
     ...fg,
