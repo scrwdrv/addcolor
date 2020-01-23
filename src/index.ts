@@ -1,5 +1,5 @@
 type Styles = 'bold' | 'dim' | 'italic' | 'underscore' | 'blink' | 'rapidBlink' | 'reverse' | 'hidden' | 'strikethrough';
-type Colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta ' | 'cyan ' | 'white' | 'default' | 'blackBright ' | 'redBright ' | 'greenBright ' | 'yellowBright ' | 'blueBright' | 'magentaBright' | 'cyanBright' | 'whiteBright';
+type Colors = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'default' | 'blackBright' | 'redBright' | 'greenBright' | 'yellowBright' | 'blueBright' | 'magentaBright' | 'cyanBright' | 'whiteBright';
 
 const code = {
     fg: {
